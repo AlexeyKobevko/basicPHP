@@ -16,9 +16,7 @@ function division($a, $b) {
         return $a / $b;
     }
 }
-
-//echo addition(10, 5) . '<br/>'; // 15
-//echo subtraction(10, 5) . '<br/>'; //5
-//echo multiplication(10, 5) . '<br/>'; //50
-//echo division(10, 5) . '<br/>'; //2
-
+//echo addition(10, 5) . '<br/>';
+//echo subtraction(10, 5) . '<br/>';
+//echo multiplication(10, 5) . '<br/>';
+//echo division(10, 5) . '<br/>';
