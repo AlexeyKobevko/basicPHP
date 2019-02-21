@@ -16,10 +16,11 @@ $regions = [
 
 foreach ($regions as $region => $cities) {
     echo $region . ":<br/>";
-    foreach ($cities as $key => $name) {
-        echo "$name, ";
-    }
-    echo "<br/>";
+    echo implode(', ', $cities) . '<br/>';
+//    foreach ($cities as $key => $name) {
+//        echo "$name, ";
+//    }
+//    echo "<br/>";
 }
 
 //Перепробовал несколько разных способов, но так и не додумался, как избавиться от последней запятой.

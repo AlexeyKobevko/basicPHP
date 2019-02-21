@@ -4,12 +4,10 @@ $menu = [
     [
         'title' => 'Главная',
         'link' => '/',
-        'children' => [],
     ],
     [
         'title' => 'О нас',
         'link' => '/about/',
-        'children' => [],
     ],
     [
         'title' => 'Каталог',
@@ -18,12 +16,10 @@ $menu = [
             [
                 'title' => 'Мужская одежда',
                 'link' => '/catalog/men/',
-                'children' => [],
             ],
             [
                 'title' => 'Женская лдежда',
                 'link' => '/catalog/women/',
-                'children' => [],
             ],
 
         ],
@@ -31,19 +27,20 @@ $menu = [
     [
         'title' => 'Контакты',
         'link' => '/contacts/',
-        'children' => [],
     ],
 ];
 
 function addMenu($array){
-    if ($array == false) {
-        return;
+    echo '<ul>';
+    foreach ($array as $elem => $element) {
+        if (is_array($element)) {
+            echo '<li>' . $element['title'] . '</li>';
+        }
+        if (is_array($element)) {
+            addMenu($element);
+        }
     }
-    $list = '<ul>';
-    foreach ($array as $element) {
-        $list = $list . '<li>' . $element['title'] . addMenu($element['children']) . '</li>';
-    }
-    return $list = $list . '</ul>';
+    echo '</ul>';
 }
 ?>
 
