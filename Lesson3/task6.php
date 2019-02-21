@@ -36,7 +36,7 @@ function addMenu($array){
         if (isset($element['title'])) {
             echo '<li>' . $element['title'] . '</li>';
         }
-        if (isset($element['children'])) {
+        if (!empty(isset($element['children']))) {
             addMenu($element['children']);
         }
     }
