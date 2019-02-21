@@ -33,11 +33,11 @@ $menu = [
 function addMenu($array){
     echo '<ul>';
     foreach ($array as $elem => $element) {
-        if (is_array($element)) {
+        if (isset($element['title'])) {
             echo '<li>' . $element['title'] . '</li>';
         }
-        if (is_array($element)) {
-            addMenu($element);
+        if (isset($element['children'])) {
+            addMenu($element['children']);
         }
     }
     echo '</ul>';
